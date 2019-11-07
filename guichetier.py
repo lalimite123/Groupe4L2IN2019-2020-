@@ -7,14 +7,14 @@ class agents:
 		self.nom = nom
 		self.ide = ide
 
-	def travailler(self):
-		print("l'agent {}, matricule {} travaille et il est :".format(self.nom, self.ide, self.poste))
+	def travailler(self): #méthode de la classe agents
+		print("l'agent {}, matricule {} travaille et il est {}:".format(self.nom, self.ide, self.poste))
 
 """classe fille"""
 
-class guichetier(agents):
+class guichetier(agents):  #La classe guichetier herite de la classe agents
 	def __init__(self, nom_guichetier, ide_guichetier, poste):
-		agents.__init__(self, nom_guichetier, poste)
+		agents.__init__(self, nom_guichetier, ide_guichetier)
 		self.poste = poste
 
 
@@ -30,7 +30,7 @@ class guichetier(agents):
 
 #pp
 
-g1 = guichetier("donman", "18A036FS", "Guichetier")
+g1 = guichetier("DOUNIA DONATIEN", "18A036FS", "Guichetier")
 
 g1.travailler()
 
