@@ -7,31 +7,35 @@ class agents:
 		self.nom = nom
 		self.ide = ide
 
-	def travailler(self): #méthode de la classe agents
-		print("l'agent {}, matricule {} travaille et il est {}:".format(self.nom, self.ide, self.poste))
+	def travailler(self): #Methode de la classe agents
+		print("L'agent {}, matricule {} travaille dans cette banque et il est {}:".format(self.nom, self.ide, self.poste))
+		print("\t §%§%§%§%§%§%§%§%§%§%§%§%§%")
 
 """classe fille"""
 
-class guichetier(agents):  #La classe guichetier herite de la classe agents
+class guichetier(agents):#la classe guichetier herite de la classe agents
 	def __init__(self, nom_guichetier, ide_guichetier, poste):
 		agents.__init__(self, nom_guichetier, ide_guichetier)
 		self.poste = poste
 
 
-	def retrait(montant, solde = 10000):
-		print("Operations de retrait...")
-		montant = input("entrer le montant à retitrer:")
+	def retrait(montant, solde = 10000): #Fonction permettant de faire le retrait
+		print("Operations de retrait :)")
+		print("\t %§%§%§%§%§%§%§%§%§%§%§%§")
+		montant = input("Entrer le montant à retitrer:")
 		montant = int(montant)
 		if montant >= solde:
-			print("solde insuffisant !!!")
+			print("Désolé, votre solde est insuffisant.....")
 		else:
 			solde -= montant
-			print("retrait effectué avec succès !!! Nouveau solde :{}".format(solde))
+			print("\t §%§%§%§%§%§%§%§%§%")
+			print("Retrait effectué avec succès... :) Nouveau solde :{}".format(solde))
+			print("\t §%§%§%§%§%§%§%§%§%§")
 
-#pp
+#Programme Principal
 
-g1 = guichetier("DOUNIA DONATIEN", "18A036FS", "Guichetier")
+g1 = guichetier("DOUNIA DONATIEN", "18A036FS", "Guichetier") # Nouvelle instance de la classe guichetier
 
-g1.travailler()
+g1.travailler #Appel de la methode
 
-g1.retrait()
+g1.retrait() #Appel de la fonction
