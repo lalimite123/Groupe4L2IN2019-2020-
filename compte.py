@@ -23,7 +23,7 @@ class Compte():
       else:
          print("desole vous ne pouvez pas emprunter cette somme")
   
-mon = Compte(23, 46)
+mon = Compte("krad", 4411)
 mon.emprunter()
 mon.emprunter()
 mon.emprunter()
