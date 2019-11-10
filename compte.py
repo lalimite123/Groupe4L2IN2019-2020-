@@ -25,4 +25,5 @@ class Compte():
   
 mon = Compte(23, 46)
 mon.emprunter()
-
+mon.emprunter()
+mon.emprunter()
